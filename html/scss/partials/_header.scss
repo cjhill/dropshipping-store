@@ -1,0 +1,9 @@
+header {
+    &.large {
+        align-items: center;
+        background-color: $green-light;
+        display: flex;
+        min-height: 400px;
+        padding: 0 5%;
+    }
+}
