@@ -1,0 +1,35 @@
+# Mac Specific
+.DS_Store
+
+# Gulp
+node_modules/
+npm-debug.log
+dist/
+themes/epcon/css/styles.css
+themes/epcon/js/bundle.js
+
+# Bower
+bower_components/
+
+# SASS
+.sass-cache/
+*.css.map
+
+# Wordpress
+uploads/*
+!uploads/.gitkeep
+# Default themes & files
+themes/index.php
+themes/twentyfifteen/
+themes/twentysixteen/
+themes/twentyseventeen/
+# Default plugins & files
+plugins/akismet/
+plugins/hello.php
+plugins/index.php
+# Ingnore any installed, non-custom plugins
+plugins/advanced-custom-fields-pro/
+
+# Docker DB
+db/*
+!db/.gitkeep
