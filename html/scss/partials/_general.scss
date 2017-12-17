@@ -1,0 +1,43 @@
+/* =========================
+   CONTAINERS
+   ========================= */
+
+/* =========================
+   USEFUL
+   ========================= */
+.center {
+  text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Form Placeholder Style
+.ie-placeholder {
+    font-size: 17px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+/* =========================
+   BACKGROUND
+   ========================= */
+.background-image {
+    @include background(center, cover);
+}

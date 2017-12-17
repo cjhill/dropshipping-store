@@ -1,0 +1,80 @@
+@mixin breakpoint($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if ($value !=null) {
+        $breakpoint: $value;
+    }
+    @if (type-of($breakpoint)=='number') {
+        @media screen and (max-width: #{$breakpoint}px) {
+            @content;
+        }
+    } @else {
+        @media #{$breakpoint} {
+            @content;
+        }
+    }
+}
+
+@mixin vertical-align-parent() {
+    transform-style: preserve-3d;
+}
+
+@mixin vertical-align($position: relative) {
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Covert px to em
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+// Fluid Grid
+@mixin row-machine($num-per-row, $margin) {
+    width: ((100% - (($num-per-row - 1) * $margin)) / $num-per-row);
+
+    &:nth-child(n) {
+        margin-bottom: $margin;
+        margin-right: $margin;
+    }
+
+    &:nth-child(#{$num-per-row}n) {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+// Animate
+@mixin animate($delay: 0s, $duration: .5s) {
+    transition-duration: $duration;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.6, 0.2, 0.1, 1);
+    transition-delay: $delay;
+}
+
+// Translate
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+}
+
+// Clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Background
+@mixin background($position, $size) {
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: $size;
+}

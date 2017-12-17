@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: $base-font-size;
+    line-height: 1.4;
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    color: gray;
+    word-wrap: break-word;
+}
+
+/* =========================
+   CLEARFIX
+   ========================= */
+.cf {
+    @include clearfix();
+}
